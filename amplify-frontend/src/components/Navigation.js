@@ -9,7 +9,7 @@ function Navigation(props) {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Navbar.Brand>
-        &nbsp; AWS Amplify Blogpost
+        &nbsp; AWS COGNITO POC V1
       </Navbar.Brand>
       {props.token ? (
         <Button style={{textAlign: "right"}} onClick={() => Auth.signOut()}>

@@ -12,14 +12,14 @@ import "./App.css";
 
 Amplify.configure({
   Auth: {
-    region: "<enter the region here>",
-    userPoolId: "<enter the cognito user pool id here>",
-    userPoolWebClientId: "<enter the applicaiton client id>",
+    region: "eu-west-2",
+    userPoolId: "eu-west-2_n1QjnbLXa",
+    userPoolWebClientId: "7vo8kh83puv302vm7mlhfup12r",
     oauth: {
-      domain: "<enter here the amazon cognito domain>",
+      domain: "oidvap5657qsdreadoidvap5657qsdread.auth.eu-west-2.amazoncognito.com",
       scope: ["email", "openid", "aws.cognito.signin.user.admin", "profile"],
-      redirectSignIn: "<enter here the amplify hosted url>",
-      redirectSignOut: "<enter here the amplify hosted url>",
+      redirectSignIn: "https://dev.d33j778sy3zkjh.amplifyapp.com",
+      redirectSignOut: "https://dev.d33j778sy3zkjh.amplifyapp.com",
       responseType: "code"
     }
   },
@@ -27,14 +27,13 @@ Amplify.configure({
     endpoints: [
       {
         name: "MyBlogPostAPI",
-        endpoint: "<enter here the API gateway endpoint url>"
+        endpoint: "https://88et9mw53m.execute-api.eu-west-2.amazonaws.com/Dev"
       }
     ]
   }
 });
 
-const federatedIdName =
-  "<name of the Identity Provider as configured in Cognito>";
+const federatedIdName = "okta";
 
 function App() {
   const [token, setToken] = useState(null);

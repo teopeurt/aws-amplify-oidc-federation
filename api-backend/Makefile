@@ -4,18 +4,19 @@
 SHELL := /bin/bash
 
 ##Parameters
-AWS_REGION			 	?= <replace with region where the deployment should live>
-PROFILE                 ?= <replace with named profile>
-STACK_NAME 		  	 	?= LambdaAuthorizer
-IDPNAME					?= <replace with name of the Provider>
-CLIENT_ID				?= <replace with OIDC IdP client id>
-CLIENT_SECRET			?= <replace with OIDC IdP client secret>
-ISSUER					?= <replace with OIDC issuer url>
-COGNITO_DOMAIN			?= <replace with cognito domain prefix name>
-DEFAULT_CALL_LIMIT		?= <replace with default daily call quota limit>
-ARTEFACT_S3_BUCKET		?= <replace with s3 bucket name where to push artefacts>
-ROLE_ATTRIBUTE 	        ?= department
-USERNAME                ?= email
+AWS_REGION			 	:= eu-west-2
+PROFILE                 := default
+STACK_NAME 		  	 	:= LambdaAuthorizer5567
+IDPNAME					:= okta
+CLIENT_ID				:= 0oa2v34gouUigH46S697
+CLIENT_SECRET			:= 4nyuyFMlVhHjzSHSdBbhvv8h4f3Ghwx7tL9bicWC
+ISSUER					:= https://trial-5826977.okta.com/
+COGNITO_DOMAIN			:= oidvap5657qsdread
+DEFAULT_CALL_LIMIT		:= 9
+ARTEFACT_S3_BUCKET		:= moss-poc-app-cognito-xa5z93i1lxhr-cognitoconfig-silaalyohx5y
+ROLE_ATTRIBUTE 	        := department
+USERNAME                := email
+
 ##System paramteres
 current_dir 	:=  $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 SOURCE_TEMPLATE	:=	$(current_dir)/CloudFormationTemplateFull.yaml
